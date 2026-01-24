@@ -1,9 +1,9 @@
 import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight, MoveDown } from 'lucide-react';
-import { api } from '../api';
-import { IProduct } from '../types';
-import { ProductCard } from '../components/ProductCard';
+import  api  from '../api';
+import type { IProduct } from '../types';
+import { ProductCard }  from '../components/ProductCard';
 import './Home.css';
 
 export const Home = () => {

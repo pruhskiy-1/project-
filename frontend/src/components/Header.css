@@ -1,0 +1,137 @@
+
+.header {
+    width: 100%;
+    background-color: #ffffff;
+    color: #000000;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 1px 0 rgba(0,0,0,0.05);
+}
+
+
+.header-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    height: 80px;
+    position: relative;
+}
+
+.header-center {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.logo {
+    font-family: 'Times New Roman', serif;
+    font-size: 32px;
+    font-weight: 900;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #000;
+    letter-spacing: -1px;
+}
+
+.header-left, .header-right {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.icon-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #000;
+    text-decoration: none;
+    transition: opacity 0.2s;
+}
+
+.icon-btn:hover {
+    opacity: 0.6;
+}
+
+.cart-label {
+    font-size: 14px;
+    font-weight: 500;
+    display: none;
+}
+
+@media (min-width: 768px) {
+    .cart-label {
+        display: block;
+    }
+}
+
+.cart-wrapper {
+    position: relative;
+}
+
+.cart-badge {
+    position: absolute;
+    top: -5px;
+    right: -8px;
+    background-color: #e65100;
+    color: white;
+    font-size: 10px;
+    font-weight: bold;
+    height: 16px;
+    width: 16px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.header-bottom {
+    padding-bottom: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.nav-list {
+    display: flex;
+    list-style: none;
+    gap: 40px;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: #000;
+    font-size: 13px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    transition: color 0.2s;
+}
+
+.nav-link.active {
+    color: #e65100;
+}
+
+.nav-link:hover {
+    color: #e65100;
+}
+
+@media (max-width: 768px) {
+    .header-top {
+        padding: 15px 20px;
+    }
+
+    .logo {
+        font-size: 24px;
+    }
+
+    .header-bottom {
+        display: none;
+
+    }
+}
