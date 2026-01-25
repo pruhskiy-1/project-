@@ -3,7 +3,6 @@ import type { IProduct } from '../types';
 import './ProductCard.css';
 
 interface ProductCardProps {
-    // Расширяем тип, чтобы добавить вторую картинку для ховера
     product: IProduct & { hoverImage?: string };
 }
 
