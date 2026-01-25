@@ -1,10 +1,16 @@
+* {
+    box-sizing: border-box;
+}
 
 .home-container {
     width: 100%;
+    max-width: 100vw;
     color: #000;
     background-color: #fff;
+    overflow-x: hidden;
 }
 
+/* --- HERO SECTION --- */
 .hero-section {
     position: relative;
     height: 100vh;
@@ -83,20 +89,7 @@
     animation: bounce 2s infinite;
 }
 
-.marquee-section {
-    background-color: #000;
-    color: #fff;
-    padding: 1rem 0;
-    overflow: hidden;
-    white-space: nowrap;
-}
-.marquee-content span {
-    margin-right: 3rem;
-    text-transform: uppercase;
-    font-weight: 700;
-    letter-spacing: 0.1em;
-}
-
+/* --- SECTION PRODUCTS --- */
 .section-container {
     max-width: 1400px;
     margin: 0 auto;
@@ -105,48 +98,82 @@
 
 .section-header {
     display: flex;
-    justify-content: space-between;
-    align-items: flex-end;
-    margin-bottom: 3rem;
-    border-bottom: 2px solid #000;
-    padding-bottom: 1rem;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 4rem;
 }
 
 .section-title {
-    font-size: 2.5rem;
+    font-size: 1.7rem;
     font-weight: 800;
     text-transform: uppercase;
+    letter-spacing: 0.05em;
 }
 
-.view-all-link {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    color: #000;
-    text-decoration: none;
-    font-weight: 500;
-    text-transform: uppercase;
-}
-
-.loading-container {
-    text-align: center;
-    padding: 50px;
-    font-size: 1.5rem;
-    text-transform: uppercase;
-}
-
+/* --- GRID (4 колонки + увеличенные отступы) --- */
 .products-grid {
     display: grid;
     grid-template-columns: 1fr;
-    gap: 2rem;
-}
-@media (min-width: 768px) {
-    .products-grid { grid-template-columns: repeat(2, 1fr); }
-}
-@media (min-width: 1024px) {
-    .products-grid { grid-template-columns: repeat(4, 1fr); }
+    /* Увеличил отступы: 60px между рядами, 30px между колонками */
+    gap: 60px 30px;
+    align-items: stretch;
 }
 
+@media (min-width: 640px) {
+    .products-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (min-width: 1024px) {
+    .products-grid {
+        grid-template-columns: repeat(4, 1fr); /* Твои любимые 4 колонки */
+    }
+}
+
+/* --- КАРТОЧКА ТОВАРА И ТЕКСТ --- */
+.product-card {
+    display: flex;
+    flex-direction: column;
+    text-decoration: none !important; /* Убираем подчеркивание у ссылки */
+    color: #000;
+}
+
+.product-image-wrapper {
+    width: 100%;
+    aspect-ratio: 1 / 1; /* Квадратный формат */
+    background-color: #f6f6f6;
+    overflow: hidden;
+    margin-bottom: 15px; /* Отступ от картинки до названия */
+}
+
+.product-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s ease;
+}
+
+.product-card:hover .product-image {
+    transform: scale(1.05);
+}
+
+/* СТИЛИ ТЕКСТА: черный, центр, меньше, без линий */
+.product-name {
+    font-size: 0.85rem; /* Размер поменьше */
+    font-weight: 600;
+    color: #000; /* Строго черный */
+    text-align: center; /* По центру */
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin: 0;
+    text-decoration: none !important; /* Гарантированно без подчеркивания */
+}
+
+.product-card:hover .product-name {
+    text-decoration: none !important; /* Никаких линий при наведении */
+    color: #000;
+}
+
+/* --- ОСТАЛЬНЫЕ СЕКЦИИ --- */
 .collections-grid-section {
     display: grid;
     grid-template-columns: 1fr;
@@ -172,74 +199,26 @@
     object-fit: cover;
     transition: transform 0.7s ease;
 }
-.collection-big-card:hover .collection-img {
-    transform: scale(1.05);
-}
 
 .collection-overlay {
     position: absolute;
     inset: 0;
     background: rgba(0,0,0,0.2);
-    transition: background 0.3s;
-}
-.collection-big-card:hover .collection-overlay {
-    background: rgba(0,0,0,0.4);
 }
 
-.collection-text {
-    position: absolute;
-    bottom: 3rem;
-    left: 3rem;
-    color: #fff;
-    z-index: 2;
-}
-
-.collection-title {
-    font-size: 2.5rem;
-    font-weight: 800;
-    text-transform: uppercase;
-    margin: 0;
-}
-
-.collection-link-text {
-    text-decoration: underline;
-    text-underline-offset: 4px;
-}
 .manifesto-section {
     background-color: #171717;
     color: #fff;
     padding: 8rem 2rem;
     text-align: center;
 }
+
 .manifesto-text {
     max-width: 800px;
     margin: 0 auto;
-    font-size: 1.5rem;
-    font-weight: 300;
-    line-height: 1.6;
+    font-size: 1.8rem;
+    font-weight: 800;
     text-transform: uppercase;
-}
-@media (min-width: 768px) {
-    .manifesto-text { font-size: 2.2rem; }
-}
-
-.manifesto-btn {
-    display: inline-block;
-    margin-top: 3rem;
-    border: 1px solid #fff;
-    padding: 0.8rem 2rem;
-    color: #fff;
-    text-decoration: none;
-    text-transform: uppercase;
-    font-size: 0.75rem;
-    letter-spacing: 0.2em;
-    font-weight: 700;
-    border-radius: 999px;
-    transition: all 0.3s;
-}
-.manifesto-btn:hover {
-    background-color: #fff;
-    color: #000;
 }
 
 @keyframes bounce {

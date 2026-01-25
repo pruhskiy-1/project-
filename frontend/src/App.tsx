@@ -23,3 +23,17 @@ function App() {
 }
 
 export default App;
+
+
+export interface IProduct {
+    id: number;
+    title: string;
+    price: number;       // API присылает цену, оставляем в типах, но не рендерим
+    description: string;
+    category: string;
+    image: string;       // У fakestoreapi поле называется 'image'
+    rating?: {
+        rate: number;
+        count: number;
+    };
+}

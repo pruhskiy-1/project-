@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { Search, User } from 'lucide-react';
+import { Search } from 'lucide-react';
 import './Header.css';
 
 export const Header = () => {
@@ -15,15 +15,14 @@ export const Header = () => {
 
                 <div className="header-center">
                     <Link to="/" className="logo">
-                        URBAN SILENCE
+                        Название магазина
                     </Link>
                 </div>
+
                 <div className="header-right">
-                    <Link to="/profile" className="icon-btn">
-                        <User size={22} strokeWidth={1.5} />
-                    </Link>
                 </div>
             </div>
+
             <nav className="header-bottom">
                 <ul className="nav-list">
                     <li><Link to="/" className="nav-link active">Home</Link></li>
