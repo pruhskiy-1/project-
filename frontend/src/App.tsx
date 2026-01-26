@@ -1,19 +1,32 @@
-
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import { Layout } from './components/Layout'; // Импортируем Layout
+import { ScrollToTop } from './components/ScrollToTop';
+import { Layout } from './components/Layout';
 import { Home } from './pages/Home';
+import { About } from './pages/About';
+
+
+export interface IProduct {
+    id: number;
+    title: string;
+    price: number;
+    description: string;
+    category: string;
+    image: string;
+    rating?: {
+        rate: number;
+        count: number;
+    };
+}
 
 function App() {
     return (
         <BrowserRouter>
+            <ScrollToTop />
             <Routes>
-
                 <Route path="/" element={<Layout />}>
-
                     <Route index element={<Home />} />
-
                     <Route path="collections" element={<div>Collections Page</div>} />
-                    <Route path="about" element={<div>About Page</div>} />
+                    <Route path="about" element={<About />} />
                     <Route path="contacts" element={<div>Contacts Page</div>} />
 
                 </Route>
@@ -23,17 +36,3 @@ function App() {
 }
 
 export default App;
-
-
-export interface IProduct {
-    id: number;
-    title: string;
-    price: number;       // API присылает цену, оставляем в типах, но не рендерим
-    description: string;
-    category: string;
-    image: string;       // У fakestoreapi поле называется 'image'
-    rating?: {
-        rate: number;
-        count: number;
-    };
-}

@@ -7,6 +7,7 @@ import { ProductCard } from "../components/ProductCard";
 import './Home.css';
 import Marquee from "react-fast-marquee";
 
+
 const myTitles = [
     "Пиджак",
     "Пиджак 2",
@@ -112,6 +113,31 @@ export const Home = () => {
                     <span className="marquee-item outline">text 6</span>
                 </Marquee>
             </div>
+            <section className="art-room-section">
+                <div className="art-room-container">
+                    <div className="art-room-header">
+                        <h2 className="art-room-title">текст</h2>
+                        <p className="art-room-subtitle">
+                            Our art is designed to elevate any space – from sleek modern offices to cozy living rooms.
+                            With its bold presence and timeless style, it seamlessly fits into every room,
+                            adding character and inspiration wherever it hangs.
+                        </p>
+                    </div>
+                    <div className="art-room-grid">
+                        <div className="art-grid-top">
+                            <img src="/man.jpg" alt="Featured Art" />
+                        </div>
+                        <div className="art-grid-bottom">
+                            <div className="art-grid-item">
+                                <img src="/woman.jpg" alt="Office Space" />
+                            </div>
+                            <div className="art-grid-item">
+                                <img src="/man.jpg" alt="Living Room" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
                 </div>
     );
 };

@@ -327,3 +327,126 @@
     line-height: 0;
     margin-bottom: 0 !important;
 }
+
+.art-room-section {
+    width: 100%;
+    padding: 100px 0;
+    background-color: #fff;
+}
+
+.art-room-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 40px;
+}
+
+.art-room-header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.art-room-title {
+    font-size: 2rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: -0.01em;
+    margin-bottom: 20px;
+}
+
+.art-room-subtitle {
+    font-size: 14px;
+    line-height: 1.6;
+    color: #555;
+    max-width: 750px;
+    margin: 0 auto;
+}
+
+.art-room-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.art-grid-top {
+    width: 100%;
+    height: 550px;
+    overflow: hidden;
+    border-radius: 2px;
+}
+
+.art-grid-top img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+}
+
+.art-grid-bottom {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    height: 450px;
+    overflow: hidden;
+    border-radius: 2px;
+}
+
+.art-grid-item img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+@media (max-width: 768px) {
+    .art-room-container {
+        padding: 0 20px;
+    }
+    .art-room-title {
+        font-size: 1.5rem;
+    }
+    .art-grid-bottom {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    .art-room-grid {
+        gap: 20px;
+    }
+}
+
+.art-grid-top, .art-grid-item {
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+}
+
+.art-grid-top img, .art-grid-item img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+
+    transition:
+            transform 1.4s cubic-bezier(0.25, 1, 0.5, 1),
+            filter 1.4s cubic-bezier(0.25, 1, 0.5, 1);
+    will-change: transform, filter;
+}
+.art-grid-top:hover img,
+.art-grid-item:hover img {
+    transform: scale(1.05);
+
+    filter: brightness(0.9);
+}
+.art-grid-top::after,
+.art-grid-item::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    transition: opacity 1s ease;
+    pointer-events: none;
+}
+.art-grid-top:hover::after,
+.art-grid-item:hover::after {
+    opacity: 1;
+}
