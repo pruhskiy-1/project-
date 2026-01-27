@@ -20,9 +20,7 @@ export const Footer = () => {
                     <ul className="footer-links">
                         <li><Link to="/search">SEARCH</Link></li>
                         <li><Link to="/about" onClick={scrollToTop}>ABOUT US</Link></li>
-                        <li><Link to="/contact">CONTACT</Link></li>
                         <li><Link to="/collections">COLLECTIONS</Link></li>
-                        <li><Link to="/contact-info">Contact Information</Link></li>
                     </ul>
                 </div>
                 <div className="footer-section social-section">

@@ -19,10 +19,10 @@ const api = {
     getCollections: async () => {
         await sleep(500);
         return [
-            { id: 'cars', name: "хуйня]", image: "/man.jpg" },
-            { id: 'art', name: "дерьмо", image: "/woman.jpg" },
+            { id: 'calishe', name: "хуйня]", image: "/man.jpg" },
+            { id: 'vasya', name: "дерьмо", image: "/woman.jpg" },
             { id: 'tables', name: "получше чем дерьмо", image: "/man.jpg" },
-            { id: 'crypto', name: "хуже чем дерьмо", image: "/woman.jpg" },
+            { id: 'hi', name: "хуже чем дерьмо", image: "/woman.jpg" },
         ];
     },
     getProductsByCollections: async (collectionId: string) => {
