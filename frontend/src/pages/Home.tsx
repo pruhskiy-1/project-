@@ -9,7 +9,7 @@ import Marquee from "react-fast-marquee";
 
 
 const myTitles = [
-    "Пиджак",
+    "Vasyan",
     "Пиджак 2",
     "Pidzhak 3",
     "Alexey suka pidzhak",
@@ -20,16 +20,14 @@ const myTitles = [
 ];
 
 export const Home = () => {
-    const [products, setProducts] = useState<IProduct[]>([]);
+    const [products, setProducts] = useState<(IProduct & {hoverImage?: string})[]>([]);
     const [loading, setLoading] = useState(true);
-
-
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const data = await api.getProducts();
+                const data = await api.getProducts() as any[];
 
-                const customProducts = data.slice(0, 8).map((product: IProduct, index: number) => ({
+                const customProducts = data.slice(0, 8).map((product, index) => ({
                     ...product,
                     image: '/man.jpg',
                     hoverImage: '/banner.jpg',
