@@ -1,81 +1,80 @@
 .footer {
     background-color: #ecebe6;
     padding: 80px 0 40px 0;
-    color: #1a2b3c;
+    color: #1a1a1a;
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
 }
-.footer-container {
-    max-width: 1200px;
-    margin: 0 auto;
-    text-align: center;
+.footer-main-content {
     display: flex;
     flex-direction: column;
-    gap: 60px;
-    padding: 0 20px;
+    align-items: center;
+    gap: 50px;
+    margin-bottom: 80px;
 }
+
+.footer-section {
+    text-align: center;
+}
+
 .footer-heading {
     font-size: 11px;
     font-weight: 600;
     letter-spacing: 0.15em;
-    margin-bottom: 30px;
     color: #888;
     text-transform: uppercase;
+    margin-bottom: 20px;
 }
+
 .footer-links {
     list-style: none;
     padding: 0;
     margin: 0;
     display: flex;
     flex-direction: column;
-    gap: 15px;
+    gap: 12px;
 }
+
 .footer-links a {
     text-decoration: none;
-    color: #1a2b3c;
+    color: #1a1a1a;
     font-size: 13px;
-    transition: opacity 0.3s;
-    font-weight: 400;
-}
-.footer-links li:nth-child(-n+4) a {
+    font-weight: 600;
     text-transform: uppercase;
-    font-weight: 500;
-}
-.footer-links a:hover {
-    opacity: 0.6;
 }
 .footer-socials {
     display: flex;
     justify-content: center;
-    gap: 25px;
-    color: #1a2b3c;
+    gap: 15px;
 }
-.footer-socials a {
-    color: inherit;
-    transition: transform 0.3s;
+.social-photo-link img {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
 }
-.footer-socials a:hover {
-    transform: translateY(-3px);
+
+.social-photo-link:hover img {
+    transform: scale(1.1);
 }
-.footer-bottom {
-    margin-top: 100px;
+
+.footer-bottom-bar {
+    max-width: 1400px;
+    margin: 0 auto;
     padding: 0 40px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    position: relative;
-}
-.footer-copyright {
-    font-size: 12px;
-    color: #1a2b3c;
-    margin: 0;
 }
 
-.footer-copyright strong {
-    font-weight: 800;
+.footer-copyright {
+    font-size: 12px;
+    color: #1a1a1a;
 }
+
 .footer-scroll-top {
     background: none;
-    border: 1px solid #1a2b3c;
+    border: 1px solid #1a1a1a;
     width: 45px;
     height: 45px;
     border-radius: 50%;
@@ -83,18 +82,17 @@
     align-items: center;
     justify-content: center;
     cursor: pointer;
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    transition: all 0.3s cubic-bezier(0.19, 1, 0.22, 1);
 }
 
 .footer-scroll-top:hover {
-    background-color: #1a2b3c;
-    color: #fff;
+    background-color: #1a1a1a;
+    color: #ecebe6;
     transform: translateY(-5px);
 }
-
 @media (max-width: 768px) {
-    .footer-bottom {
-        flex-direction: column;
+    .footer-bottom-bar {
+        flex-direction: column-reverse;
         gap: 30px;
         text-align: center;
     }

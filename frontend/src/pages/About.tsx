@@ -9,13 +9,13 @@ import './About.css';
             </nav>
             <div className="about-container">
                 <div className="about-text-side">
-                    <h1 className="about-title">О нашей шаражкиной конторке</h1>
+                    <h1 className="about-title">О нас</h1>
                     <div className="about-description">
                         <p>
-                            Короче мы крутые васяны и мы делаем крутые вещи верьте нам
+                            Длинный текст
                         </p>
                         <p>
-                            uuudsaduuus
+                            еще
                         </p>
                     </div>
                 </div>

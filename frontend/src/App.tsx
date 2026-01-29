@@ -8,19 +8,6 @@ import {CategoryPage} from "./pages/CategoryPage.tsx";
 import { ProductDetail } from './pages/ProductDetail';
 
 
-export interface IProduct {
-    id: number;
-    title: string;
-    price: number;
-    description: string;
-    category: string;
-    image: string;
-    rating?: {
-        rate: number;
-        count: number;
-    };
-}
-
 function App() {
     return (
         <BrowserRouter>

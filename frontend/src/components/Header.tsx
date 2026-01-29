@@ -45,9 +45,9 @@ export const Header = () => {
 
                 <nav className="header-bottom">
                     <ul className="nav-list">
-                        <li><Link to="/" className="nav-link active">Home</Link></li>
-                        <li><Link to="/collections" className="nav-link">Collections</Link></li>
-                        <li><Link to="/About" className="nav-link">About Us</Link></li>
+                        <li><Link to="/" className="nav-link active">Домой</Link></li>
+                        <li><Link to="/collections" className="nav-link">Коллекции</Link></li>
+                        <li><Link to="/About" className="nav-link">О нас</Link></li>
                     </ul>
                 </nav>
             </div>

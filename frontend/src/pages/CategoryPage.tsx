@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import api from '../api';
 import { ProductCard } from '../components/ProductCard';
-import type { IProduct } from '../App';
+import type { IProduct } from '../types';
 import './CategoryPage.css';
 
 export const CategoryPage = () => {
@@ -16,10 +16,10 @@ export const CategoryPage = () => {
             try {
                 if (categoryId) {
                     const data = await api.getProductsByCollections(categoryId);
-                    setProducts(data as IProduct[]);
+                    setProducts(data);
                 }
             } catch (error) {
-                console.error("Ошибка загрузки:", error);
+                console.error(error);
             } finally {
                 setLoading(false);
             }

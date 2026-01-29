@@ -8,32 +8,15 @@ import './Home.css';
 import Marquee from "react-fast-marquee";
 
 
-const myTitles = [
-    "Vasyan",
-    "Пиджак 2",
-    "Pidzhak 3",
-    "Alexey suka pidzhak",
-    "vasyan",
-    "котовася",
-    "лузер1",
-    "легчайшая"
-];
 
 export const Home = () => {
-    const [products, setProducts] = useState<(IProduct & {hoverImage?: string})[]>([]);
     const [loading, setLoading] = useState(true);
+    const [products, setProducts] = useState<IProduct[]>([]);
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const data = await api.getProducts() as any[];
-
-                const customProducts = data.slice(0, 8).map((product, index) => ({
-                    ...product,
-                    image: '/man.jpg',
-                    hoverImage: '/banner.jpg',
-                    title: myTitles[index] || product.title
-                }));
-                setProducts(customProducts);
+                const data = await api.getProducts();
+                setProducts(data.slice(0, 8));
             } catch (error) {
                 console.error(error);
             } finally {
@@ -42,8 +25,6 @@ export const Home = () => {
         };
         void fetchData();
     }, []);
-
-
     const scrollToContent = () => {
         window.scrollTo({top: window.innerHeight, behavior: 'smooth'});
     };
@@ -53,10 +34,10 @@ export const Home = () => {
             <section className="hero-section">
                 <img src="/banner.jpg" alt="Hero Background" className="hero-bg"/>
                 <div className="hero-content">
-                    <span className="hero-subtitle">ляляля</span>
+                    <span className="hero-subtitle">Текст</span>
                     <h1 className="hero-title">Название <br/> магазина</h1>
                     <div className="hero-btn-wrapper">
-                        <Link to="/collections" className="hero-btn">Здарова лузеры!</Link>
+                        <Link to="/collections" className="hero-btn">Перейти к нашим коллекциям</Link>
                     </div>
                 </div>
                 <button onClick={scrollToContent} className="scroll-icon">
@@ -66,11 +47,11 @@ export const Home = () => {
 
             <section className="section-container">
                 <div className="section-header">
-                    <h2 className="section-title">Лучшие коллекции</h2>
+                    <h2 className="section-title">Лучшие предметы</h2>
                 </div>
 
                 {loading ? (
-                    <div className="loading-container">Loading...</div>
+                    <div className="loading-container">Загрузка...</div>
                 ) : (
                     <>
                         <div className="products-grid">
@@ -116,9 +97,7 @@ export const Home = () => {
                     <div className="art-room-header">
                         <h2 className="art-room-title">текст</h2>
                         <p className="art-room-subtitle">
-                            Our art is designed to elevate any space – from sleek modern offices to cozy living rooms.
-                            With its bold presence and timeless style, it seamlessly fits into every room,
-                            adding character and inspiration wherever it hangs.
+                            Длинное описание
                         </p>
                     </div>
                     <div className="art-room-grid">
