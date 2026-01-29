@@ -13,10 +13,15 @@
 
 .category-nav {
     font-size: 11px;
-    color: #888;
     text-transform: uppercase;
+    color: #888;
+    margin-bottom: 40px;
     letter-spacing: 0.1em;
-    margin-bottom: 30px;
+}
+
+.category-nav a {
+    text-decoration: none;
+    color: #000;
 }
 
 .category-title {
@@ -65,3 +70,4 @@
         padding: 0 20px;
     }
 }
+

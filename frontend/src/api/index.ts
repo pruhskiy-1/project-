@@ -7,14 +7,14 @@ const instance = axios.create({
 });
 
 const MOCK_PRODUCTS: IProduct[] = [
-    { id: 1, title: "Предмет 1", image: "/man.jpg", hoverImage: "/banner.jpg", category: "col1", price: 0, description: "Описание для предмета 1" },
-    { id: 2, title: "Предмет 2", image: "/woman.jpg", hoverImage: "/man.jpg", category: "col2", price: 0, description: "Описание для предмета 2" },
-    { id: 3, title: "Предмет 3", image: "/man.jpg", hoverImage: "/banner.jpg", category: "col3", price: 0, description: "Описание для предмета 3" },
-    { id: 4, title: "Предмет 4", image: "/woman.jpg", hoverImage: "/man.jpg", category: "col1", price: 0, description: "Описание для предмета 4" },
-    { id: 5, title: "Предмет 5", image: "/man.jpg", hoverImage: "/banner.jpg", category: "col2", price: 0, description: "Описание для предмета 5" },
-    { id: 6, title: "Предмет 6", image: "/man.jpg", hoverImage: "/banner.jpg", category: "col1", price: 0, description: "Описание для предмета 6" },
-    { id: 7, title: "Предмет 7", image: "/woman.jpg", hoverImage: "/man.jpg", category: "col4", price: 0, description: "Описание для предмета 7" },
-    { id: 8, title: "Предмет 8", image: "/man.jpg", hoverImage: "/banner.jpg", category: "col2", price: 0, description: "Описание для предмета 8" },
+    { id: 1, title: "Предмет 1", image: "/man.jpg", hoverImage: "/banner.jpg", category: "Коллекция 1", price: 0, description: "Описание для предмета 1" },
+    { id: 2, title: "Предмет 2", image: "/woman.jpg", hoverImage: "/man.jpg", category: "Коллекция 2", price: 0, description: "Описание для предмета 2" },
+    { id: 3, title: "Предмет 3", image: "/man.jpg", hoverImage: "/banner.jpg", category: "Коллекция 3", price: 0, description: "Описание для предмета 3" },
+    { id: 4, title: "Предмет 4", image: "/woman.jpg", hoverImage: "/man.jpg", category: "Коллекция 1", price: 0, description: "Описание для предмета 4" },
+    { id: 5, title: "Предмет 5", image: "/man.jpg", hoverImage: "/banner.jpg", category: "Коллекция 2", price: 0, description: "Описание для предмета 5" },
+    { id: 6, title: "Предмет 6", image: "/man.jpg", hoverImage: "/banner.jpg", category: "Коллекция 1", price: 0, description: "Описание для предмета 6" },
+    { id: 7, title: "Предмет 7", image: "/woman.jpg", hoverImage: "/man.jpg", category: "Коллекция 4", price: 0, description: "Описание для предмета 7" },
+    { id: 8, title: "Предмет 8", image: "/man.jpg", hoverImage: "/banner.jpg", category: "Коллекция 2", price: 0, description: "Описание для предмета 8" },
 ];
 const api = {
     getProducts: async (): Promise<IProduct[]> => {
@@ -27,10 +27,10 @@ const api = {
     },
     getCollections: async (): Promise<ICollection[]> => {
         return [
-            { id: 'col1', name: "Коллекция 1", image: "/man.jpg" },
-            { id: 'col2', name: "Коллекция 2", image: "/woman.jpg" },
-            { id: 'col3', name: "Коллекция 3", image: "/man.jpg" },
-            { id: 'col4', name: "Коллекция 4", image: "/woman.jpg" },
+            { id: 'Коллекция 1', name: "Коллекция 1", image: "/man.jpg" },
+            { id: 'Коллекция 2', name: "Коллекция 2", image: "/woman.jpg" },
+            { id: 'Коллекция 3', name: "Коллекция 3", image: "/man.jpg" },
+            { id: 'Коллекция 4', name: "Коллекция 4", image: "/woman.jpg" },
         ];
     },
 

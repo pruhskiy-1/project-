@@ -5,7 +5,7 @@ import './About.css';
     return (
         <div className="about-page">
             <nav className="breadcrumbs">
-                <Link to="/">Home/</Link><span>About us</span>
+                <Link to="/">Домой/</Link><span>О нас</span>
             </nav>
             <div className="about-container">
                 <div className="about-text-side">
