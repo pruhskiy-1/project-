@@ -27,18 +27,32 @@
     grid-template-columns: 1.2fr 1fr;
     gap: 80px;
 }
+.detail-image-section {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
 .main-image-wrapper {
     width: 100%;
+    aspect-ratio: 1 / 1;
+
     background-color: #f7f7f7;
     overflow: hidden;
+    position: relative;
+    border-radius: 2px;
 }
 
 .main-image-wrapper img {
     width: 100%;
-    height: auto;
-    display: block;
+    height: 100%;
     object-fit: cover;
-    transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+    display: block;
+    transition: transform 1.5s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.main-image-wrapper:hover img {
+    transform: scale(1.05);
 }
 .detail-info-section {
     display: flex;

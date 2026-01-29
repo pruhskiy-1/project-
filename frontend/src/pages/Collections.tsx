@@ -26,10 +26,10 @@ export const Collections = () => {
         void fetchCategories();
     }, []);
 
-    if (loading) return <div style={{padding: '200px', textAlign: 'center'}}>Loading...</div>;
+    if (loading) return <div style={{padding: '200px', textAlign: 'center'}}>Загрузка...</div>;
     return (
         <div className="collections-page">
-            <h1 className="collections-title">Collections</h1>
+            <h1 className="collections-title">Коллекции</h1>
             <div className="collections-grid">
                 {categories.map((cat) => (
                     <Link to={`/collections/${cat.id}`} key={cat.id} className="category-card">
@@ -38,7 +38,7 @@ export const Collections = () => {
                         </div>
                         <div className="category-info">
                             <h3>{cat.name}</h3>
-                            <span>View Collection</span>
+                            <span>Посмотреть коллекцию</span>
                         </div>
                     </Link>
                 ))}

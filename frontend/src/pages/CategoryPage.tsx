@@ -26,12 +26,12 @@ export const CategoryPage = () => {
         };
         void fetchCategoryProducts();
     }, [categoryId]);
-    if (loading) return <div className="category-status">Loading Collection...</div>;
+    if (loading) return <div className="category-status">Закрузка коллекций...</div>;
     return (
         <main className="category-page">
             <div className="category-container">
                 <nav className="category-nav">
-                    <Link to="/">Home</Link> / <Link to="/collections">Collections</Link> / <span>{categoryId}</span>
+                    <Link to="/">Домой</Link> / <Link to="/collections">Коллекции</Link> / <span>{categoryId}</span>
                 </nav>
 
                 <h1 className="category-title">{categoryId}</h1>
