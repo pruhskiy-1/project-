@@ -2,8 +2,12 @@ import axios from 'axios';
 import type { IProduct, ICollection } from '../types';
 const baseURL = "https://my-json-server.typicode.com/typicode/demo";
 
+const sleep = (ms: number) => new Promise(resolve => setTimeout(resolve, ms));
 const instance = axios.create({
     baseURL: baseURL,
+    headers: {
+        'Content-Type': 'application/json',
+    }
 });
 
 const MOCK_PRODUCTS: IProduct[] = [
@@ -17,6 +21,9 @@ const MOCK_PRODUCTS: IProduct[] = [
     { id: 8, title: "Предмет 8", image: "/man.jpg", hoverImage: "/banner.jpg", category: "Коллекция 2", price: 0, description: "Описание для предмета 8" },
 ];
 const api = {
+        /* getProducts: async () => {
+        const response = await instance.get<IProduct[]>('/products');
+        return response.data;*/
     getProducts: async (): Promise<IProduct[]> => {
         try {
             const response = await instance.get<IProduct[]>('/products');
@@ -25,6 +32,10 @@ const api = {
             return MOCK_PRODUCTS;
         }
     },
+    /*  getCollections: async () => {
+        const response = await instance.get<ICollection[]>('/collections');
+        return response.data;
+    },*/
     getCollections: async (): Promise<ICollection[]> => {
         return [
             { id: 'Коллекция 1', name: "Коллекция 1", image: "/man.jpg" },
@@ -33,11 +44,18 @@ const api = {
             { id: 'Коллекция 4', name: "Коллекция 4", image: "/woman.jpg" },
         ];
     },
-
     getProductsByCollections: async (collectionId: string): Promise<IProduct[]> => {
         return MOCK_PRODUCTS.filter(item => item.category === collectionId);
     },
-
+    getHeroMedia: async () => {
+        await sleep(500);
+        return {
+            videoUrl: '/video.mp4',
+            bannerUrl: '/banner.jpg',
+        }
+        /*const responce = await instance.get('/settings/heroMedia');
+        return responce.data;*/
+    },
     getProductById: async (id: string | number): Promise<IProduct> => {
         const found = MOCK_PRODUCTS.find(p => p.id === Number(id));
         return found || MOCK_PRODUCTS[0];

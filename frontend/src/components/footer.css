@@ -75,22 +75,37 @@
 
 .footer-socials {
     display: flex;
-    gap: 15px;
+    gap: 18px;
     justify-content: center;
+    align-items: center;
 }
 
 .footer-social-link {
-    color: #666666;
-    text-decoration: none;
-    transition: all 0.3s ease;
     display: flex;
     align-items: center;
     justify-content: center;
+    text-decoration: none;
+    transition: transform 0.2s ease;
 }
 
 .footer-social-link:hover {
-    color: #000000;
-    transform: translateY(-2px);
+    transform: translateY(-3px);
+}
+
+.social-img {
+    width: 36px;
+    height: 36px;
+    border-radius: 10px;
+    object-fit: cover;
+    filter: grayscale(100%) opacity(0.7);
+    background-color: transparent;
+
+    transition: all 0.3s ease;
+}
+
+.footer-social-link:hover .social-img {
+    filter: grayscale(0%) opacity(1);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
 }
 .social-app-box {
     width: 40px;
