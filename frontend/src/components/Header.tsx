@@ -59,7 +59,7 @@ export const Header = () => {
                     </div>
 
                     <div className="header-center">
-                        <Link to="/" className="logo">Название магазина</Link>
+                        <Link to="/" className="logo">FESENCE GALLERY</Link>
                     </div>
                     <div className="header-right">
                     </div>

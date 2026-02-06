@@ -16,7 +16,7 @@ export const Home = () => {
         const fetchData = async () => {
             try {
                 const data = await api.getProducts();
-                setProducts(data.slice(0, 8));
+                setProducts(data.slice(0, 12));
             } catch (error) {
                 console.error(error);
             } finally {
@@ -34,10 +34,10 @@ export const Home = () => {
             <section className="hero-section">
                 <img src="/banner.jpg" alt="Hero Background" className="hero-bg"/>
                 <div className="hero-content">
-                    <span className="hero-subtitle">Текст</span>
-                    <h1 className="hero-title">Название <br/> магазина</h1>
+                    <span className="hero-subtitle">/FESENCE/</span>
+                    <h1 className="hero-title">FESENCE <br/> GALLERY</h1>
                     <div className="hero-btn-wrapper">
-                        <Link to="/collections" className="hero-btn">Перейти к нашим коллекциям</Link>
+                        <Link to="/collections" className="hero-btn">Перейти к коллекциям</Link>
                     </div>
                 </div>
                 <button onClick={scrollToContent} className="scroll-icon">
@@ -47,7 +47,7 @@ export const Home = () => {
 
             <section className="section-container">
                 <div className="section-header">
-                    <h2 className="section-title">Лучшие предметы</h2>
+                    <h2 className="section-title">Наши произведения</h2>
                 </div>
 
                 {loading ? (

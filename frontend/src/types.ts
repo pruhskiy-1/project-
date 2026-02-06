@@ -5,6 +5,7 @@ export interface IProduct {
     description: string;
     category: string;
     image: string;
+    images: string[];
     hoverImage?: string;
 }
 export interface ICollection {
