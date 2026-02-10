@@ -10,7 +10,6 @@ export const ProductCard = ({ product }: ProductCardProps) => {
     return (
         <Link to={`/products/${product.id}`} className="product-card">
             <div className="product-image-wrapper">
-                {/* Основное фото */}
                 <img
                     src={product.image}
                     alt={product.title}

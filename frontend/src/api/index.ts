@@ -11,18 +11,18 @@ const instance = axios.create({
 });
 
 const MOCK_PRODUCTS: IProduct[] = [
-    { id: 1, title: "Картины( 1 часть, «2»)", image: "/man.jpg", hoverImage: "/banner.jpg", images: ["/man.jpg", "/banner.jpg", "/woman.jpg"], category: "Коллекция 1", price: 0, description: "Описание для предмета 1" },
-    { id: 2, title: "Картины( 1 часть, «1»)", image: "/woman.jpg", hoverImage: "/man.jpg", images: ["/woman.jpg", "/man.jpg", "/banner.jpg"], category: "Коллекция 2", price: 0, description: "Описание для предмета 2" },
-    { id: 3, title: "Картины( 1 часть, «4»)", image: "/man.jpg", hoverImage: "/banner.jpg", images: ["/man.jpg", "/banner.jpg", "/woman.jpg"], category: "Коллекция 3", price: 0, description: "Описание для предмета 3" },
-    { id: 4, title: "Картины( 1 часть, «5»)", image: "/woman.jpg", hoverImage: "/man.jpg", images: ["/woman.jpg", "/man.jpg", "/banner.jpg"], category: "Коллекция 1", price: 0, description: "Описание для предмета 4" },
-    { id: 5, title: "Картины( 1 часть, «7»)", image: "/man.jpg", hoverImage: "/banner.jpg", images: ["/man.jpg", "/banner.jpg", "/woman.jpg"], category: "Коллекция 2", price: 0, description: "Описание для предмета 5" },
-    { id: 6, title: "Картины( 1 часть, «8»)", image: "/man.jpg", hoverImage: "/banner.jpg", images: ["/man.jpg", "/banner.jpg", "/woman.jpg"], category: "Коллекция 1", price: 0, description: "Описание для предмета 6" },
-    { id: 7, title: "Картины( 1 часть, «9»)", image: "/woman.jpg", hoverImage: "/man.jpg", images: ["/woman.jpg", "/man.jpg", "/banner.jpg"], category: "Коллекция 4", price: 0, description: "Описание для предмета 7" },
-    { id: 8, title: "Картины( 2 часть, «1»)", image: "/man.jpg", hoverImage: "/banner.jpg", images: ["/man.jpg", "/banner.jpg", "/woman.jpg"], category: "Коллекция 2", price: 0, description: "Описание для предмета 8" },
-    { id: 9, title: "Картины( 2 часть, «2»)", image: "/man.jpg", hoverImage: "/banner.jpg", images: ["/man.jpg", "/banner.jpg", "/woman.jpg"], category: "Коллекция 2", price: 0, description: "Описание для предмета 9" },
-    { id: 10, title: "Картины( 2 часть, «4»)", image: "/man.jpg", hoverImage: "/banner.jpg", images: ["/man.jpg", "/banner.jpg", "/woman.jpg"], category: "Коллекция 2", price: 0, description: "Описание для предмета 10" },
-    { id: 11, title: "Картины( 2 часть, «5»)", image: "/man.jpg", hoverImage: "/banner.jpg", images: ["/man.jpg", "/banner.jpg", "/woman.jpg"], category: "Коллекция 2", price: 0, description: "Описание для предмета 11" },
-    { id: 12, title: "Картины( 1 часть, «2»)", image: "/man.jpg", hoverImage: "/banner.jpg", images: ["/man.jpg", "/banner.jpg", "/woman.jpg"], category: "Коллекция 2", price: 0, description: "Описание для предмета 12" },
+    { id: 1, title: "Предмет 1", image: "/predmet1/1pr.jpg", hoverImage: "/predmet1/7last.jpg", images: ["/predmet1/2.jpg", "/predmet1/3.jpg", "/predmet1/4.jpg","/predmet1/5.jpg","/predmet1/6.jpg","/predmet1/7last.jpg"], category: "money", price: 0, description: "Описание для предмета 1" },
+    { id: 2, title: "Предмет 2", image: "/predmet2/1pr.jpg", hoverImage: "/predmet2/8last.jpg", images: ["/predmet2/2.jpg", "/predmet2/3.jpg", "/predmet2/4.jpg", "/predmet2/5.jpg", "/predmet2/6.jpg", "/predmet2/7.jpg", "/predmet2/8last.jpg"], category: "money", price: 0, description: "Описание для предмета 2" },
+    { id: 3, title: "Предмет 3", image: "/predmet3/1pr.jpg", hoverImage: "/predmet3/8last.jpg", images: ["/predmet3/2.jpg", "/predmet3/3.jpg", "/predmet3/4.jpg", "/predmet3/5.jpg", "/predmet3/6.jpg", "/predmet3/7.jpg", "/predmet3/8last.jpg"], category: "money", price: 0, description: "Описание для предмета 3" },
+    { id: 4, title: "Предмет 4", image: "/predmet4/1pr.jpg", hoverImage: "/predmet4/7last.jpg", images: ["/predmet4/2.jpg", "/predme4/3.jpg", "/predmet4/4.jpg", "/predmet4/5.jpg", "/predmet4/6.jpg", "/predmet4/7last.jpg"], category: "money", price: 0, description: "Описание для предмета 4" },
+    { id: 5, title: "Предмет 5", image: "/predmet5/1pr.jpg", hoverImage: "/predmet5/7last.jpg", images: ["/predmet5/2.jpg", "/predmet5/3.jpg", "/predmet5/4.jpg", "/predmet5/5.jpg", "/predmet5/6.jpg", "/predmet5/7last.jpg"], category: "money", price: 0, description: "Описание для предмета 5" },
+    { id: 6, title: "Предмет 6", image: "/predmet6/1pr.jpg", hoverImage: "/predmet6/7last.jpg", images: ["/predmet6/2.jpg", "/predmet6/3.jpg", "/predmet6/4.jpg", "/predmet6/5.jpg", "/predmet6/6.jpg", "/predmet6/7last.jpg"], category: "money", price: 0, description: "Описание для предмета 6" },
+    { id: 7, title: "Предмет 7", image: "/predmet7/1pr.jpg", hoverImage: "/predmet7/7pr.jpg", images: ["/predmet7/2.jpg", "/predmet7/3.jpg", "/predmet7/4.jpg", "/predmet7/5.jpg", "/predmet7/6.jpg", "/predmet7/7pr.jpg"], category: "money", price: 0, description: "Описание для предмета 7" },
+    { id: 8, title: "Предмет 8", image: "/predmet8/1pr.jpg", hoverImage: "/predmet8/7last.jpg", images: ["/predmet8/2.jpg", "/predmet8/3.jpg", "/predmet8/4.jpg", "/predmet8/5.jpg", "/predmet8/6.jpg", "/predmet8/7last.jpg"], category: "money", price: 0, description: "Описание для предмета 8" },
+    { id: 9, title: "Предмет 9", image: "/predmet9/1pr.jpg", hoverImage: "/predmet9/6last.jpg", images: ["/predmet9/2.jpg", "/predmet9/3.jpg", "/predmet9/4.jpg", "/predmet9/5.jpg", "/predmet9/6last.jpg"], category: "cars", price: 0, description: "Описание для предмета 9" },
+    { id: 10, title: "Предмет 10", image: "/predmet10/1pr.jpg", hoverImage: "/predmet10/6last.jpg", images: ["/predmet10/2.jpg", "/predmet10/3.jpg", "/predmet10/4.jpg", "/predmet10/5.jpg", "/predmet10/6last.jpg"], category: "cars", price: 0, description: "Описание для предмета 10" },
+    { id: 11, title: "Предмет 11", image: "/predmet11/1pr.jpg", hoverImage: "/predmet11/6last.jpg", images: ["/predmet11/2.jpg", "/predmet11/3.jpg", "/predmet11/4.jpg", "/predmet11/5.jpg", "/predmet11/6last.jpg"], category: "cars", price: 0, description: "Описание для предмета 11" },
+    { id: 12, title: "Предмет 12", image: "/predmet12/1pr.jpg", hoverImage: "/predmet12/6last.jpg", images: ["/predmet12/2.jpg", "/predmet12/3.jpg", "/predmet12/4.jpg", "/predmet12/5.jpg", "/predmet12/6last.jpg"], category: "cars", price: 0, description: "Описание для предмета 12" },
 ];
 
 const api = {
@@ -43,9 +43,9 @@ const api = {
     },*/
     getCollections: async (): Promise<ICollection[]> => {
         return [
-            { id: 'Коллекция 1', name: "MONEY", image: "/man.jpg" },
-            { id: 'Коллекция 2', name: "CAR KEY", image: "/woman.jpg" },
-            { id: 'Коллекция 3', name: "CRYPTO", image: "/man.jpg" },
+            { id: 'money', name: "MONEY", image: "/man.jpg" },
+            { id: 'cars', name: "CAR KEY", image: "/woman.jpg" },
+            { id: 'crypto', name: "CRYPTO", image: "/man.jpg" },
         ];
     },
     getProductsByCollections: async (collectionId: string): Promise<IProduct[]> => {

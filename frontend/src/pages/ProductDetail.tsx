@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import api from '../api';
-import { Truck, ShieldCheck, Heart, ChevronLeft, ChevronRight } from 'lucide-react';
+import {  ChevronLeft, ChevronRight } from 'lucide-react';
 import type { IProduct } from '../types';
 import './ProductDetail.css';
 
@@ -82,12 +82,6 @@ export const ProductDetail = () => {
                     <div className="detail-info-section">
                         <h1 className="detail-title">{product.title}</h1>
                         <p className="detail-description">{product.description}</p>
-
-                        <div className="detail-features">
-                            <div className="feature-item"><Truck size={20} strokeWidth={1.5}/> <span>Worldwide Shipping</span></div>
-                            <div className="feature-item"><ShieldCheck size={20} strokeWidth={1.5}/> <span>Authenticity Guaranteed</span></div>
-                            <div className="feature-item"><Heart size={20} strokeWidth={1.5}/> <span>Handmade with passion</span></div>
-                        </div>
                     </div>
                 </div>
             </div>
