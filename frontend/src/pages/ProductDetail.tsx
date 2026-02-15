@@ -47,7 +47,7 @@ export const ProductDetail = () => {
         <main className="product-detail-page">
             <div className="detail-container">
                 <nav className="detail-breadcrumbs">
-                    <Link to="/">Домой</Link> / <Link to="/collections">Коллекции</Link> / <span>{product.title}</span>
+                    <Link to="/">Главная</Link> / <Link to="/collections">Коллекции</Link> / <span>{product.title}</span>
                 </nav>
 
                 <div className="detail-content">

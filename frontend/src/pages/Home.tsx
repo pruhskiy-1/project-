@@ -95,26 +95,27 @@ export const Home = () => {
             <section className="art-room-section">
                 <div className="art-room-container">
                     <div className="art-room-header">
-                        <h2 className="art-room-title">текст</h2>
+                        <h2 className="art-room-title">ART FOR EVERY ROOM</h2>
                         <p className="art-room-subtitle">
-                            Длинное описание
+                            Наши работы созданы для того, чтобы подчеркнуть характер любого пространства.
                         </p>
                     </div>
+
                     <div className="art-room-grid">
                         <div className="art-grid-top">
-                            <img src="/man.jpg" alt="Featured Art" />
+                            <img src="/man.jpg" alt="Art 1" />
                         </div>
                         <div className="art-grid-bottom">
                             <div className="art-grid-item">
-                                <img src="/woman.jpg" alt="Office Space" />
+                                <img src="/woman.jpg" alt="Art 2" />
                             </div>
                             <div className="art-grid-item">
-                                <img src="/man.jpg" alt="Living Room" />
+                                <img src="/man.jpg" alt="Art 3" />
                             </div>
                         </div>
                     </div>
                 </div>
             </section>
-                </div>
+        </div>
     );
 };

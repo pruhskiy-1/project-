@@ -1,5 +1,5 @@
-import { useState, useEffect, useCallback } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
+import React, { useState, useEffect, useCallback } from 'react';
+import { NavLink, Link, useNavigate } from 'react-router-dom'; // Добавил Link обратно
 import { Search, X, ArrowRight } from 'lucide-react';
 import api from '../api';
 import type { IProduct } from '../types';
@@ -37,8 +37,8 @@ export const Header = () => {
         const performSearch = async () => {
             if (searchQuery.trim().length > 0) {
                 try {
-                    const allProducts = await api.getProducts();
-                    const filtered = allProducts.filter(p =>
+                    const data = await api.getProducts();
+                    const filtered = data.filter(p =>
                         p.title.toLowerCase().includes(searchQuery.toLowerCase())
                     );
                     setResults(filtered.slice(0, 4));
@@ -59,20 +59,28 @@ export const Header = () => {
                     </div>
 
                     <div className="header-center">
+                        {/* Логотип всегда ведет на главную, NavLink тут не нужен */}
                         <Link to="/" className="logo">FESENCE GALLERY</Link>
                     </div>
-                    <div className="header-right">
-                    </div>
+
+                    <div className="header-right"></div>
                 </div>
 
                 <nav className="header-bottom">
                     <ul className="nav-list">
-                        <li><Link to="/" className="nav-link">Домой</Link></li>
-                        <li><Link to="/collections" className="nav-link">Коллекции</Link></li>
-                        <li><Link to="/about" className="nav-link">О нас</Link></li>
+                        <li>
+                            <NavLink to="/" className="nav-link">Главная</NavLink>
+                        </li>
+                        <li>
+                            <NavLink to="/collections" className="nav-link">Коллекции</NavLink>
+                        </li>
+                        <li>
+                            <NavLink to="/about" className="nav-link">О нас</NavLink>
+                        </li>
                     </ul>
                 </nav>
             </div>
+
             <div className={`search-overlay ${isSearchOpen ? 'open' : ''}`}>
                 <div className="search-wrapper">
                     <div className="search-top-row">
@@ -95,6 +103,7 @@ export const Header = () => {
                             <Search size={26} strokeWidth={1.5} />
                         </button>
                     </form>
+
                     {searchQuery && (
                         <div className="search-live-results">
                             <div className="results-list">

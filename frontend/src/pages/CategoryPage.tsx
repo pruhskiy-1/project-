@@ -31,7 +31,7 @@ export const CategoryPage = () => {
         <main className="category-page">
             <div className="category-container">
                 <nav className="category-nav">
-                    <Link to="/">Домой</Link> / <Link to="/collections">Коллекции</Link> / <span>{categoryId}</span>
+                    <Link to="/">Главная</Link> / <Link to="/collections">Коллекции</Link> / <span>{categoryId}</span>
                 </nav>
 
                 <h1 className="category-title">{categoryId}</h1>
